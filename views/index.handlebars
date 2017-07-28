@@ -9,6 +9,7 @@
 		<div class="col-md-1"></div>
 		<div id="undevoured" class="col-md-4">
 			<div class="panel panel-default">
+				<h2>Not Yet Devoured</h2>
 				<ol class="list-group">
 					{{#each burgers}}
 					{{#unless this.devoured}}
@@ -27,6 +28,7 @@
 		<div class="col-md-1"></div>
 		<div id="devoured" class="col-md-4">
 			<div class="panel panel-default">
+			<h2>Devoured</h2>
 				<ol class="list-group">
 					{{#each burgers}}
 					{{#if this.devoured}}
