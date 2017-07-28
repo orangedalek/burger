@@ -1,0 +1,25 @@
+<div class ="container">
+	<div>
+		<img id="burger-photo" src="assets/img/burger.jpeg">
+
+		<h1 id="EDB">EAT DA BURGER!</h1>
+
+	</div>
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div id="undevoured" class="col-md-4">
+			<div class="panel panel-default">
+				<ul class="list-group">
+					{{#each burgers}}
+					{{#unless this.devoured}}
+						<li>
+						<p>{{this.burger_name}}</p>
+						    <form action="/{{this.id}}?_method=PUT" method="POST">
+      							<button type="submit">DEVOUR!</button>
+        					</form>
+						</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
